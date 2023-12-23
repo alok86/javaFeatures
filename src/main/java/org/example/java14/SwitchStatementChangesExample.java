@@ -9,13 +9,13 @@ public class SwitchStatementChangesExample {
     }
 
     private static void showQuater(Month month) {
-        switch (month){
-            case JANUARY , FEBRUARY , MARCH-> System.out.println("First Quarter");
-            case APRIL , MAY , JUNE -> System.out.println("Second Quarter");
-            case JULY , AUGUST , SEPTEMBER -> System.out.println("Third Quarter");
-            case OCTOBER , NOVEMBER , DECEMBER -> System.out.println("Forth Quarter");
-            default -> System.out.println("Unknown Quarter");
-        }
+        String quarter = switch (month){
+            case JANUARY , FEBRUARY , MARCH-> "First Quarter";
+            case APRIL , MAY , JUNE -> "Second Quarter";
+            case JULY , AUGUST , SEPTEMBER -> "Third Quarter";
+            case OCTOBER , NOVEMBER , DECEMBER -> "Forth Quarter";
+        };
+        System.out.println(quarter);
     }
 
 }
