@@ -10,10 +10,17 @@ public class SwitchStatementChangesExample {
 
     private static void showQuater(Month month) {
         String quarter = switch (month){
-            case JANUARY , FEBRUARY , MARCH-> "First Quarter";
-            case APRIL , MAY , JUNE -> "Second Quarter";
+            case JANUARY , FEBRUARY , MARCH-> {
+                // multiple statement can be use
+                yield "First Quarter";
+            }
+            case APRIL , MAY , JUNE -> {
+                yield "Second Quarter";
+            }
             case JULY , AUGUST , SEPTEMBER -> "Third Quarter";
-            case OCTOBER , NOVEMBER , DECEMBER -> "Forth Quarter";
+            case OCTOBER , NOVEMBER , DECEMBER -> {
+                yield "Forth Quarter";
+            }
         };
         System.out.println(quarter);
     }
